@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style_dash.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("http://localhost:3307/api/users")  // Chama a API para obter os usuários
+                .then(response => response.json())
+                .then(data => {
+                    const tabela = document.getElementById("users-table");
+                    data.forEach(user => {
+                        let row = tabela.insertRow();
+                        row.insertCell(0).textContent = user.id;
+                        row.insertCell(1).textContent = user.cpf;
+                        row.insertCell(2).textContent = user.nome;
+                        row.insertCell(3).textContent = user.email;
+                    });
+                })
+                .catch(error => console.error("Erro ao carregar usuários:", error));
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Dashboard de Usuários</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="users-table">
+                <!-- Os usuários serão carregados aqui -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
