@@ -5,8 +5,6 @@ Com autenticação de usuários, niveis de permissão de acesso e possibilidade 
 
 ## Linguagem
 
-<!-- ![Javascript](https://logos-world.net/imageup/JavaScript_21022023/JavaScript_logo_PNG_(1).png)
-![HTML 5](https://images.seeklogo.com/logo-png/20/1/html5-logo-png_seeklogo-206834.png) -->
 ![s](https://www.pikpng.com/pngl/b/597-5977109_html5-css3-javascript-logos-html-css-icon-png.png)
 
 ## Dependencias
@@ -24,9 +22,13 @@ Com autenticação de usuários, niveis de permissão de acesso e possibilidade 
 1. Clone o repositório com o comando `git clone https://github.com/patocg/loginpage` no terminal.
 2. Instale as dependencias utilizando o comando  `npm install` no terminal.
 
-## Uso
+## Uso / Teste
 
 * Para iniciar o servidor execute no terminal: `node server.js`
+
+## Status Atual do Projeto
+
+* Em Desenvolvimento.
 
 ## Licença
 
